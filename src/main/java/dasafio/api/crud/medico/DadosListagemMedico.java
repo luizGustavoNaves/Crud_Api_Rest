@@ -1,0 +1,7 @@
+package dasafio.api.crud.medico;
+
+public record DadosListagemMedico(String nome, String email, String crm, Especialidade especialidade, String telefone, Long id) {
+    public DadosListagemMedico(Medico medico) {
+        this(medico.getNome(), medico.getEmail(), medico.getCrm(), medico.getEspecialidade(), medico.getTelefone(), medico.getId());
+    }
+}
